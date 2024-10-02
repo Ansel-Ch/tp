@@ -9,6 +9,7 @@
         "project-team": "Project team",
         "nathan-loo": "Nathan Loo",
         "jerrell-lee": "Jerrell Lee",
+        "wee-kean": "Wee Kean",
         "ansel-chong": "Ansel Chong",
         "hugh": "Hugh"
       },
@@ -137,6 +138,14 @@
     {
       "src": "team/ansel-ch.md",
       "title": "Ansel Chong's Project Portfolio Page",
+      "headings": {
+        "project-teletutor": "Project: Teletutor"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "team/edsel-tan.md",
+      "title": "Wee Kean's Project Portfolio Page",
       "headings": {
         "project-teletutor": "Project: Teletutor"
       },
