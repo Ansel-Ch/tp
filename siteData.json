@@ -62,6 +62,7 @@
         "glossary": "Glossary",
         "appendix-instructions-for-manual-testing": "Appendix: Instructions for manual testing",
         "launch-and-shutdown": "Launch and shutdown",
+        "head-1-re-launch-the-app-by-double-clicking-the-jar-file-expected-the-most-recent-window-size-and-location-is-retained": "&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD\n1. Re-launch the app by double-clicking the jar file.\nExpected: The most recent window size and location is retained.",
         "deleting-a-person": "Deleting a person",
         "saving-data": "Saving data"
       },
