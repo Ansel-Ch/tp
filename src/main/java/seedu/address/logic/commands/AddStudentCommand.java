@@ -14,7 +14,7 @@ import seedu.address.model.student.Student;
 /**
  * Adds a student to the address book.
  */
-public class AddStudentCommand extends Command {
+public class AddStudentCommand extends Command implements Undoable {
 
     public static final String COMMAND_WORD = "adds";
 

@@ -27,17 +27,17 @@ public class UndoCommandTest {
     }
 
     @Test
-    public void execute_nonEmptyStack_notUndoableCommand() {
+    public void execute_emptyStack_notUndoableCommand() {
         Command command = new NotUndoableCommandStub();
-        commandStack.push(command);
-        assertEquals("The previous command is not undoable",
+        CommandStack.pushCommand(command);
+        assertEquals("There are no commands to undo",
                 new UndoCommand().execute(model).getFeedbackToUser());
     }
 
     @Test
     public void execute_nonEmptyStack_undoableCommand() {
         Command command = new UndoableCommandStub();
-        commandStack.push(command);
+        CommandStack.pushCommand(command);
         assertEquals(UndoCommand.MESSAGE_SUCCESS,
                 new UndoCommand().execute(model).getFeedbackToUser());
     }
@@ -61,14 +61,9 @@ public class UndoCommandTest {
         public CommandResult execute(Model model) {
             return new CommandResult("Not Undoable command executed");
         }
-
-        @Override
-        public boolean undo(Model model) {
-            return false;
-        }
     }
 
-    private class UndoableCommandStub extends Command {
+    private class UndoableCommandStub extends Command implements Undoable {
         @Override
         public CommandResult execute(Model model) {
             return new CommandResult("Undoable command executed");

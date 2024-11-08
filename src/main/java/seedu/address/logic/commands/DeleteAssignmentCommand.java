@@ -21,7 +21,7 @@ import seedu.address.model.student.StudentNumber;
 /**
  * Deletes an assignment.
  */
-public class DeleteAssignmentCommand extends Command {
+public class DeleteAssignmentCommand extends Command implements Undoable {
 
     public static final String COMMAND_WORD = "deletea";
 
@@ -125,8 +125,7 @@ public class DeleteAssignmentCommand extends Command {
 
     @Override
     public boolean undo(Model model) {
-        // The command will only have been executed if assignment was assigned a value
-        if (assignment == null) {
+        if (student == null || assignment == null) {
             return false;
         }
 

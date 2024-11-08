@@ -6,7 +6,7 @@ import seedu.address.model.Model;
 /**
  * Represents a command with hidden internal logic and the ability to be executed.
  */
-public abstract class Command implements Undoable {
+public abstract class Command {
 
     /**
      * Executes the command and returns the result message.
@@ -16,10 +16,4 @@ public abstract class Command implements Undoable {
      * @throws CommandException If an error occurs during command execution.
      */
     public abstract CommandResult execute(Model model) throws CommandException;
-
-    @Override
-    public boolean undo(Model model) {
-        // By default, commands are not undoable
-        return false;
-    }
 }

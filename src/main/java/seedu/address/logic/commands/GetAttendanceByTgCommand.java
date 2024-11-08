@@ -15,7 +15,7 @@ import seedu.address.ui.AttendanceWindow;
 /**
  * Retrieves the attendance of all students in a specific tutorial group.
  */
-public class GetAttendanceByTgCommand extends Command {
+public class GetAttendanceByTgCommand extends Command implements Undoable {
     public static final String COMMAND_WORD = "getattg";
 
     public static final String MESSAGE_USAGE = COMMAND_WORD

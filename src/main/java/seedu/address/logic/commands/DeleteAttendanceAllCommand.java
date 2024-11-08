@@ -20,7 +20,7 @@ import seedu.address.model.student.TutorialGroup;
 /**
  * Deletes the attendance of all students in a specified tutorial group for a specified date.
  */
-public class DeleteAttendanceAllCommand extends Command {
+public class DeleteAttendanceAllCommand extends Command implements Undoable {
 
     public static final String COMMAND_WORD = "deleteatall";
 

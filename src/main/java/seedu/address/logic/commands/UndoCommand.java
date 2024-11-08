@@ -12,19 +12,18 @@ public class UndoCommand extends Command {
             + "Example: " + COMMAND_WORD;
 
     public static final String MESSAGE_SUCCESS = "Undo successful";
+    public static final String MESSAGE_FAILURE = "The previous command cannot be undone";
 
     @Override
     public CommandResult execute(Model model) {
-        Command command = CommandStack.popCommand();
+        Undoable command = CommandStack.popCommand();
         if (command == null) {
             return new CommandResult("There are no commands to undo");
         }
 
-        boolean isUndoable = command.undo(model);
-        if (!isUndoable) {
-            return new CommandResult("The previous command is not undoable");
-        }
-        return new CommandResult(MESSAGE_SUCCESS);
+        return command.undo(model)
+                ? new CommandResult(String.format(MESSAGE_SUCCESS))
+                : new CommandResult(MESSAGE_FAILURE);
     }
 
     @Override

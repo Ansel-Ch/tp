@@ -13,7 +13,7 @@ import seedu.address.model.student.Student;
 /**
  * Views an existing student in the address book.
  */
-public class ViewStudentCommand extends Command {
+public class ViewStudentCommand extends Command implements Undoable {
 
     public static final String COMMAND_WORD = "view";
 

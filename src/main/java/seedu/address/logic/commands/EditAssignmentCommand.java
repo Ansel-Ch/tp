@@ -25,7 +25,7 @@ import seedu.address.model.student.StudentNumber;
 /**
  * Creates an EditAssignmentCommand to edit the specified {@code Assignment}
  */
-public class EditAssignmentCommand extends Command {
+public class EditAssignmentCommand extends Command implements Undoable {
 
     public static final String COMMAND_WORD = "edita";
 

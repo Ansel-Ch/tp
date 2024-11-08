@@ -3,9 +3,9 @@ package seedu.address.logic.commands;
 import java.util.Stack;
 
 /**
- * Represents the command stack that stores the list of all commands
+ * Represents the command stack that stores the list of all undoable commands
  */
-public class CommandStack extends Stack<Command> {
+public class CommandStack extends Stack<Undoable> {
     private static final CommandStack COMMAND_STACK = new CommandStack();
 
     /**
@@ -26,17 +26,16 @@ public class CommandStack extends Stack<Command> {
      * @param command The most recent valid command executed by the user
      */
     public static void pushCommand(Command command) {
-        if (command instanceof UndoCommand) {
-            return;
+        if (command instanceof Undoable c) {
+            COMMAND_STACK.push(c);
         }
-        COMMAND_STACK.push(command);
     }
 
     /**
      * Pops a command from the command stack
      * @return The most recent valid command executed by the user
      */
-    public static Command popCommand() {
+    public static Undoable popCommand() {
         if (COMMAND_STACK.isEmpty()) {
             return null;
         }

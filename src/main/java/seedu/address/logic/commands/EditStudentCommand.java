@@ -26,7 +26,7 @@ import seedu.address.model.student.TutorialGroup;
 /**
  * Edits the details of an existing person in the address book.
  */
-public class EditStudentCommand extends Command {
+public class EditStudentCommand extends Command implements Undoable {
 
     public static final String COMMAND_WORD = "edits";
 

@@ -24,7 +24,7 @@ import seedu.address.model.student.StudentNumber;
 /**
  * Adds an assignment to a student.
  */
-public class AddAssignmentCommand extends Command {
+public class AddAssignmentCommand extends Command implements Undoable {
 
     public static final String COMMAND_WORD = "adda";
 

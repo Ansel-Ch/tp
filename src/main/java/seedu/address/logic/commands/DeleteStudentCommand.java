@@ -15,7 +15,7 @@ import seedu.address.model.student.StudentNumber;
 /**
  * Deletes a student from the system based on the student number provided.
  */
-public class DeleteStudentCommand extends Command {
+public class DeleteStudentCommand extends Command implements Undoable {
     public static final String COMMAND_WORD = "deletes";
 
     public static final String MESSAGE_USAGE = COMMAND_WORD

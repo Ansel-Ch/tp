@@ -21,7 +21,7 @@ import seedu.address.model.student.StudentNumber;
 /**
  * Marks the attendance of a student for a specific date.
  */
-public class MarkAttendanceCommand extends Command {
+public class MarkAttendanceCommand extends Command implements Undoable {
     public static final String COMMAND_WORD = "markat";
 
     public static final String MESSAGE_USAGE = COMMAND_WORD

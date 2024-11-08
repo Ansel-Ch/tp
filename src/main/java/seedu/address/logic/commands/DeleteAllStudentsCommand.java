@@ -9,7 +9,7 @@ import seedu.address.model.student.Student;
 /**
  * Deletes all students, clearing the list of students.
  */
-public class DeleteAllStudentsCommand extends Command {
+public class DeleteAllStudentsCommand extends Command implements Undoable {
     public static final String COMMAND_WORD = "deleteall";
 
     public static final String MESSAGE_USAGE = COMMAND_WORD

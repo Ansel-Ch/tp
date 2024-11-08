@@ -21,7 +21,7 @@ import seedu.address.model.student.StudentNumber;
 /**
  * Deletes the attendance of a student for a specific date.
  */
-public class DeleteAttendanceCommand extends Command {
+public class DeleteAttendanceCommand extends Command implements Undoable {
 
     public static final String COMMAND_WORD = "deleteat";
 

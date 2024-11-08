@@ -20,7 +20,7 @@ import seedu.address.model.student.TutorialGroup;
 /**
  * Marks the attendance of all students in a specified tutorial group as present for a specified date.
  */
-public class MarkPresentAllCommand extends Command {
+public class MarkPresentAllCommand extends Command implements Undoable {
 
     public static final String COMMAND_WORD = "markpresentall";
 

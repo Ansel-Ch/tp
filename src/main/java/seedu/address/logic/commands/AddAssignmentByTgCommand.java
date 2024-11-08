@@ -16,7 +16,7 @@ import seedu.address.model.student.TutorialGroup;
 /**
  * Adds an assignment to a tutorial group.
  */
-public class AddAssignmentByTgCommand extends Command {
+public class AddAssignmentByTgCommand extends Command implements Undoable {
 
     public static final String COMMAND_WORD = "addatg";
 
